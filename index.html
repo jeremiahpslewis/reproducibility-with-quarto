@@ -163,7 +163,7 @@
         <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li><a href="#covariance-ellipses" id="toc-covariance-ellipses" class="nav-link active" data-scroll-target="#covariance-ellipses"> <span class="header-section-number">0.1</span> Covariance Ellipses</a></li>
+<li><a href="#demo-of-quarto-rendering-python-and-julia-in-separate-tabs" id="toc-demo-of-quarto-rendering-python-and-julia-in-separate-tabs" class="nav-link active" data-scroll-target="#demo-of-quarto-rendering-python-and-julia-in-separate-tabs"> <span class="header-section-number">0.1</span> Demo of Quarto Rendering Python and Julia in separate tabs</a></li>
 </ul>
 </nav>
     </div>
@@ -177,23 +177,21 @@
 <p>Jeremiah Lewis</p>
 </div></div></div></div></div><div><div class="quarto-title-meta-heading">Published</div><div class="quarto-title-meta-contents"><p class="date">May 22, 2021</p></div></div></div></header>
 
-<section id="covariance-ellipses" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="covariance-ellipses"><span class="header-section-number">0.1</span> Covariance Ellipses</h2>
-<p>A 2×2 covariance matrix <code>Σ</code> can be plotted as an ellipse, which is a contour line of a Gaussian density function with variance <code>Σ</code>. See <a href="#fig-covariance">Figure&nbsp;<span>1</span></a> for an example.</p>
+<section id="demo-of-quarto-rendering-python-and-julia-in-separate-tabs" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="demo-of-quarto-rendering-python-and-julia-in-separate-tabs"><span class="header-section-number">0.1</span> Demo of Quarto Rendering Python and Julia in separate tabs</h2>
+<p>For a textbook example of phenomenon X, we can use Julia and Python code to enable students to refer to the language they are most comfortable with / compare ease of solving a problem using different tools.</p>
 <div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Julia</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Python</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labeledby="tabset-1-1-tab">
+<p>Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks</p>
 <div class="cell" data-execution_count="1">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">StatsPlots</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">covellipse</span>([<span class="fl">0</span>,<span class="fl">2</span>], [<span class="fl">2</span> <span class="fl">1</span>; <span class="fl">1</span> <span class="fl">4</span>], n_std<span class="op">=</span><span class="fl">2</span>, </span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>           aspect_ratio<span class="op">=</span><span class="fl">1</span>, label<span class="op">=</span><span class="st">"cov1"</span>)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">covellipse!</span>([<span class="fl">1</span>,<span class="fl">0</span>], [<span class="fl">1</span> <span class="op">-</span><span class="fl">0.5</span>; <span class="op">-</span><span class="fl">0.5</span> <span class="fl">3</span>], </span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            showaxes<span class="op">=</span><span class="cn">true</span>, label<span class="op">=</span><span class="st">"cov2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div id="fig-covariance" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -205,7 +203,22 @@
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labeledby="tabset-1-2-tab">
-<pre class="{python}"><code>1+1</code></pre>
+<p>Snippet from: https://quarto.org/docs/computations/python.html#code-blocks</p>
+<pre class="{python}"><code>#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()</code></pre>
 </div>
 </div>
 </div>
