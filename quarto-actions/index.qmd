@@ -1,7 +1,6 @@
 ---
-title: "StatsPlots Demo"
-author: "Norah Jones"
-date: "5/22/2021"
+title: "Julia and Python Side-by-Side"
+author: "Jeremiah Lewis"
 format:
   html:
     code-fold: false
