@@ -32,7 +32,6 @@ jobs:
       - name: Render book to all formats
         run: |
           quarto render quarto-actions
-          ls quarto-actions
       - name: Deploy 🚀
         # only deploy when push to main
         if: github.event_name != 'pull_request'
