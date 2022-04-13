@@ -1,5 +1,5 @@
 ---
-title: "Julia and Python Side-by-Side"
+title: "Multi-Language Stats Book Demo"
 author: "Jeremiah Lewis"
 format:
   html:
@@ -7,27 +7,9 @@ format:
 engine: jupyter
 ---
 
-## Demo of Quarto Rendering Python and Julia in separate tabs
+## Trial of How One Might Support Multiple Stats Languages in One Book
 
 For a textbook example of phenomenon X, we can use Julia and Python code to enable students to refer to the language they are most comfortable with / compare ease of solving a problem using different tools.
-
-::: {.panel-tabset}
-
-### Julia
-
-Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks
-
-```{julia}
-#| label: fig-covariance
-#| fig-cap: "Covariance ellipses"
-
-using StatsPlots
-
-covellipse([0,2], [2 1; 1 4], n_std=2, 
-           aspect_ratio=1, label="cov1")
-covellipse!([1,0], [1 -0.5; -0.5 3], 
-            showaxes=true, label="cov2")
-```
 
 ### Python
 
@@ -51,4 +33,6 @@ ax.grid(True)
 plt.show()
 ```
 
-:::
+See @sec-ch-1-jl for Julia code.
+
+

@@ -1,7 +1,82 @@
 ---
-title: "Chapter 2"
+title: "Julia Code"
+author: "Jeremiah Lewis"
+format:
+  html:
+    code-fold: false
+engine: jupyter
 ---
 
-## Chapter 2
+## Julia Supporting Code
 
-Chapter 2 in this book about using Quarto with Github Actions
+### Chapter 1 {#ch-1-jl}
+
+Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks
+
+```{julia}
+#| label: fig-covariance
+#| fig-cap: "Covariance ellipses"
+
+using StatsPlots
+
+covellipse([0,2], [2 1; 1 4], n_std=2, 
+           aspect_ratio=1, label="cov1")
+covellipse!([1,0], [1 -0.5; -0.5 3], 
+            showaxes=true, label="cov2")
+```
+
+### Chapter 2
+
+```{julia}
+#| label: fig-covariance
+#| fig-cap: "Covariance ellipses"
+
+using StatsPlots
+
+covellipse([0,2], [2 1; 1 4], n_std=2, 
+           aspect_ratio=1, label="cov1")
+covellipse!([1,0], [1 -0.5; -0.5 3], 
+            showaxes=true, label="cov2")
+```
+
+### Chapter 3
+
+```{julia}
+#| label: fig-covariance
+#| fig-cap: "Covariance ellipses"
+
+using StatsPlots
+
+covellipse([0,2], [2 1; 1 4], n_std=2, 
+           aspect_ratio=1, label="cov1")
+covellipse!([1,0], [1 -0.5; -0.5 3], 
+            showaxes=true, label="cov2")
+```
+
+### Chapter 4
+
+```{julia}
+#| label: fig-covariance
+#| fig-cap: "Covariance ellipses"
+
+using StatsPlots
+
+covellipse([0,2], [2 1; 1 4], n_std=2, 
+           aspect_ratio=1, label="cov1")
+covellipse!([1,0], [1 -0.5; -0.5 3], 
+            showaxes=true, label="cov2")
+```
+
+### Chapter 5
+
+```{julia}
+#| label: fig-covariance
+#| fig-cap: "Covariance ellipses"
+
+using StatsPlots
+
+covellipse([0,2], [2 1; 1 4], n_std=2, 
+           aspect_ratio=1, label="cov1")
+covellipse!([1,0], [1 -0.5; -0.5 3], 
+            showaxes=true, label="cov2")
+```
