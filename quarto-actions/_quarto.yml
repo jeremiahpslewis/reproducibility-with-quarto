@@ -1,5 +1,8 @@
 project:
   title: "quarto-actions"
-
-
+  type: book
+engine: jupyter
+format:
+  html:
+    theme: cosmo
 
