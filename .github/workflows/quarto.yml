@@ -26,9 +26,8 @@ jobs:
           python3 -m pip install jupyter
           julia -e 'using Pkg; Pkg.add("IJulia")'
       - name: Render book to all format
-        # Add any command line argument needed
         run: |
-          quarto render
+          quarto render quarto-actions
       - name: Deploy 🚀
         # only deploy when push to main
         if: github.event_name != 'pull_request'
