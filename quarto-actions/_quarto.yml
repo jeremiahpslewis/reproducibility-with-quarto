@@ -1,8 +1,17 @@
 project:
-  title: "quarto-actions"
   type: book
-engine: jupyter
+  output-dir: _book
+
+book:
+  title: "Quarto & Github Actions"
+  author: "Jeremiah Lewis"
+  date: "2022-04-13"
+  chapters:
+    - index.qmd
+    - quarto-actions.qmd
+
+# bibliography: references.bib
+
 format:
   html:
     theme: cosmo
-
