@@ -24,7 +24,8 @@ jobs:
       - name: Install Basic Requirements
         run: |
           python3 -m pip install jupyter
-          julia -e 'using Pkg; Pkg.add("IJulia")'
+          # TODO: Switch to using Julia Project.toml and Manifest.toml
+          julia -e 'using Pkg; Pkg.add("IJulia"); Pkg.add("StatsPlots")'
       - name: Render book to all format
         run: |
           quarto render quarto-actions
