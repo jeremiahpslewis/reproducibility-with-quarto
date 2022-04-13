@@ -26,7 +26,7 @@ jobs:
           python3 -m pip install jupyter
           # TODO: Switch to using Julia Project.toml and Manifest.toml
           julia -e 'using Pkg; Pkg.add("IJulia"); Pkg.add("StatsPlots")'
-      - name: Render book to all format
+      - name: Render book to all formats
         run: |
           quarto render quarto-actions
       - name: Deploy 🚀
