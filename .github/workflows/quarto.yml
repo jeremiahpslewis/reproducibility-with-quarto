@@ -22,13 +22,13 @@ jobs:
         with:
           version: '1.7'
 
-    - name: Install python version
-      uses: gabrielfalcao/pyenv-action@v9
-      with:
-        default: 3.7.5
-        command: |
-          PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.10.4
-          pyenv global 3.10.4
+      - name: Install python version
+        uses: gabrielfalcao/pyenv-action@v9
+        with:
+          default: 3.7.5
+          command: |
+            PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.10.4
+            pyenv global 3.10.4
         
 
       - name: Install Basic Requirements
