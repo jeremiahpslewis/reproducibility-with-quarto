@@ -84,15 +84,14 @@ plt.show()
 #| label: fig-polar-julia
 #| fig-cap: "A line plot on a polar axis"
 %%julia
+%matplotlib inline
 
 using StatsPlots
 
-p = covellipse([0,2], [2 1; 1 4], n_std=2, 
+covellipse([0,2], [2 1; 1 4], n_std=2, 
            aspect_ratio=1, label="cov1");
-covellipse!(p[1,0], [1 -0.5; -0.5 3], 
+covellipse!([1,0], [1 -0.5; -0.5 3], 
             showaxes=true, label="cov2")
-
-display(p)
 ```
 
 
