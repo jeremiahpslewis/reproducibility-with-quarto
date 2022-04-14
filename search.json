@@ -4,7 +4,21 @@
     "href": "index.html",
     "title": "Quarto & Github Actions",
     "section": "",
-    "text": "For a textbook example of phenomenon X, we can use Julia and Python code to enable students to refer to the language they are most comfortable with / compare ease of solving a problem using different tools.\n\n\nSnippet from: https://quarto.org/docs/computations/python.html#code-blocks\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\nSee Section 2.1.1 for Julia code."
+    "text": "%load_ext julia.magic\n\nInitializing Julia interpreter. This may take some time..."
+  },
+  {
+    "objectID": "index.html#trial-of-how-one-might-support-multiple-stats-languages-in-one-book",
+    "href": "index.html#trial-of-how-one-might-support-multiple-stats-languages-in-one-book",
+    "title": "Quarto & Github Actions",
+    "section": "0.1 Trial of How One Might Support Multiple Stats Languages in One Book",
+    "text": "0.1 Trial of How One Might Support Multiple Stats Languages in One Book\nFor a textbook example of phenomenon X, we can use Julia and Python code to enable students to refer to the language they are most comfortable with / compare ease of solving a problem using different tools.\n\n0.1.1 Python\nSnippet from: https://quarto.org/docs/computations/python.html#code-blocks"
+  },
+  {
+    "objectID": "index.html#python-with-julia-cross-reference",
+    "href": "index.html#python-with-julia-cross-reference",
+    "title": "Quarto & Github Actions",
+    "section": "0.2 Python with Julia Cross Reference",
+    "text": "0.2 Python with Julia Cross Reference\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\nSee Section 2.1.1 for Julia code."
   },
   {
     "objectID": "quarto-actions.html",
