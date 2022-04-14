@@ -11,16 +11,21 @@ engine: jupyter
 %load_ext julia.magic
 ```
 
-## Trial of How One Might Support Multiple Stats Languages in One Book
+## Motivation
 
-For a textbook example of phenomenon X, we can use Julia and Python code to enable students to refer to the language they are most comfortable with / compare ease of solving a problem using different tools.
+Quarto is a promising successor to RMarkdown, in part because it isn't tied to a specific programming language. For publishing introductory (statistics) textbooks, one often wants to show code examples in multiple programming languages (usually Python, R, and Julia) as the field (and applications) are currently split amongst them. This site demonstrates different strategies for incorporating multiple programming languages into a single book.
 
-### Python
+## Example 1: Crossreferencing examples in other languages
+
+With this approach, the book is written in a main language, shown here as Python, and links to snippets in other languages are provided below each code block.
+
+One advantage here is that each notebook file is dedicated to a separate programming language and can be executed in a dedicated environment. In terms of open source contributorship, it also makes ownership and maintenance responsibilities clearly separated on a per-file basis. The clear downside is that it means the book is not able to put all programming languages on equal footing and on mobile / tablet, the book will be harder to read as you will have to toggle between tabs or go forward / back between pages.
+
+```{python}
+
+### Example: How to Plot a Figure
 
 Snippet from: https://quarto.org/docs/computations/python.html#code-blocks
-
-## Python with Julia Cross Reference
-
 
 ```{python}
 #| label: fig-polar
@@ -40,10 +45,12 @@ ax.grid(True)
 plt.show()
 ```
 
-See @sec-ch-1-jl for Julia code.
+See @sec-ch-1-jl for Julia code and @sec-ch-1-jl for Python code.
 
 
-# Python and Julia in Separate Tabs, using Python Kernel and Julia 'Magic'
+## Python and Julia in Separate Tabs, using Python Kernel and Julia 'Magic'
+
+In this example, the book is written in multiple languages in parallel, with all languages rendered in a single Jupyter notebook, using the Python Kernel and pyjulia extension (or other extensions like rpy2 as necessary).
 
 ::: {.panel-tabset}
 
@@ -84,5 +91,10 @@ covellipse!([1,0], [1 -0.5; -0.5 3],
             showaxes=true, label="cov2")
 
 ```
+
+
+## R
+
+Add R example here.
 
 :::
