@@ -8,6 +8,10 @@ engine: jupyter
 ---
 
 ```{python}
+#| echo: false
+#| output: false
+#| warning: false
+
 %load_ext julia.magic
 ```
 
