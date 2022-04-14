@@ -4,13 +4,13 @@
     "href": "index.html",
     "title": "Quarto & Github Actions",
     "section": "",
-    "text": "For a textbook example of phenomenon X, we can use Julia and Python code to enable students to refer to the language they are most comfortable with / compare ease of solving a problem using different tools.\n\nJuliaPython\n\n\nSnippet from: https://quarto.org/docs/computations/julia.html#code-blocks\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 1: Covariance ellipses\n\n\n\n\n\n\nSnippet from: https://quarto.org/docs/computations/python.html#code-blocks\n#| label: fig-polar\n#| fig-cap: \"A line plot on a polar axis\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()"
+    "text": "For a textbook example of phenomenon X, we can use Julia and Python code to enable students to refer to the language they are most comfortable with / compare ease of solving a problem using different tools.\n\n\nSnippet from: https://quarto.org/docs/computations/python.html#code-blocks\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\nSee ?sec-ch-1-jl for Julia code."
   },
   {
     "objectID": "quarto-actions.html",
     "href": "quarto-actions.html",
-    "title": "2  Chapter 2",
+    "title": "2  Julia Code",
     "section": "",
-    "text": "Chapter 2 in this book about using Quarto with Github Actions"
+    "text": "Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.1: Covariance ellipses\n\n\n\n\n\n\n\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.2: Covariance ellipses\n\n\n\n\n\n\n\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.3: Covariance ellipses\n\n\n\n\n\n\n\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.4: Covariance ellipses\n\n\n\n\n\n\n\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.5: Covariance ellipses"
   }
 ]

@@ -3,7 +3,8 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.9.243">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Quarto &amp; Github Actions - 2&nbsp; Chapter 2</title>
+  <meta name="author" content="Jeremiah Lewis">
+  <title>Quarto &amp; Github Actions - 2&nbsp; Julia Code</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -11,6 +12,69 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
 
   <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -58,7 +122,7 @@
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 2</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Julia Code</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -83,12 +147,12 @@
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Julia and Python Side-by-Side</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Multi-Language Stats Book Demo</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quarto-actions.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 2</span></a>
+  <a href="./quarto-actions.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Julia Code</span></a>
   </div>
 </li>
     </ul>
@@ -99,7 +163,14 @@
         <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li><a href="#chapter-2" id="toc-chapter-2" class="nav-link active" data-scroll-target="#chapter-2"> <span class="header-section-number">2.1</span> Chapter 2</a></li>
+<li><a href="#julia-supporting-code" id="toc-julia-supporting-code" class="nav-link active" data-scroll-target="#julia-supporting-code"> <span class="header-section-number">2.1</span> Julia Supporting Code</a>
+<ul class="collapse">
+<li><a href="#ch-1-jl" id="toc-ch-1-jl" class="nav-link" data-scroll-target="#ch-1-jl"> <span class="header-section-number">2.1.1</span> Chapter 1</a></li>
+<li><a href="#chapter-2" id="toc-chapter-2" class="nav-link" data-scroll-target="#chapter-2"> <span class="header-section-number">2.1.2</span> Chapter 2</a></li>
+<li><a href="#chapter-3" id="toc-chapter-3" class="nav-link" data-scroll-target="#chapter-3"> <span class="header-section-number">2.1.3</span> Chapter 3</a></li>
+<li><a href="#chapter-4" id="toc-chapter-4" class="nav-link" data-scroll-target="#chapter-4"> <span class="header-section-number">2.1.4</span> Chapter 4</a></li>
+<li><a href="#chapter-5" id="toc-chapter-5" class="nav-link" data-scroll-target="#chapter-5"> <span class="header-section-number">2.1.5</span> Chapter 5</a></li>
+</ul></li>
 </ul>
 </nav>
     </div>
@@ -107,14 +178,112 @@
 <main class="content" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
 
-<div class="quarto-title"><h1 class="title d-none d-lg-block display-7"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 2</span></h1></div></header>
 
-<section id="chapter-2" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="chapter-2"><span class="header-section-number">2.1</span> Chapter 2</h2>
-<p>Chapter 2 in this book about using Quarto with Github Actions</p>
+<div class="quarto-title"><h1 class="title d-none d-lg-block display-7"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Julia Code</span></h1></div><div class="quarto-title-meta"><div><div class="quarto-title-meta-heading">Author</div><div class="quarto-title-meta-contents"><div class="quarto-title-authors"><div><div>
+<p>Jeremiah Lewis</p>
+</div></div></div></div></div></div></header>
+
+<section id="julia-supporting-code" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="julia-supporting-code"><span class="header-section-number">2.1</span> Julia Supporting Code</h2>
+<section id="ch-1-jl" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="ch-1-jl"><span class="header-section-number">2.1.1</span> Chapter 1</h3>
+<p>Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">StatsPlots</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">covellipse</span>([<span class="fl">0</span>,<span class="fl">2</span>], [<span class="fl">2</span> <span class="fl">1</span>; <span class="fl">1</span> <span class="fl">4</span>], n_std<span class="op">=</span><span class="fl">2</span>, </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>           aspect_ratio<span class="op">=</span><span class="fl">1</span>, label<span class="op">=</span><span class="st">"cov1"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">covellipse!</span>([<span class="fl">1</span>,<span class="fl">0</span>], [<span class="fl">1</span> <span class="op">-</span><span class="fl">0.5</span>; <span class="op">-</span><span class="fl">0.5</span> <span class="fl">3</span>], </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            showaxes<span class="op">=</span><span class="cn">true</span>, label<span class="op">=</span><span class="st">"cov2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div id="fig-covariance" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="quarto-actions_files/figure-html/fig-covariance-output-1.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.1: Covariance ellipses</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="chapter-2" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="chapter-2"><span class="header-section-number">2.1.2</span> Chapter 2</h3>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">StatsPlots</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">covellipse</span>([<span class="fl">0</span>,<span class="fl">2</span>], [<span class="fl">2</span> <span class="fl">1</span>; <span class="fl">1</span> <span class="fl">4</span>], n_std<span class="op">=</span><span class="fl">2</span>, </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>           aspect_ratio<span class="op">=</span><span class="fl">1</span>, label<span class="op">=</span><span class="st">"cov1"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">covellipse!</span>([<span class="fl">1</span>,<span class="fl">0</span>], [<span class="fl">1</span> <span class="op">-</span><span class="fl">0.5</span>; <span class="op">-</span><span class="fl">0.5</span> <span class="fl">3</span>], </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            showaxes<span class="op">=</span><span class="cn">true</span>, label<span class="op">=</span><span class="st">"cov2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div id="fig-covariance1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="quarto-actions_files/figure-html/fig-covariance1-output-1.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.2: Covariance ellipses</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="chapter-3" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="chapter-3"><span class="header-section-number">2.1.3</span> Chapter 3</h3>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">StatsPlots</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">covellipse</span>([<span class="fl">0</span>,<span class="fl">2</span>], [<span class="fl">2</span> <span class="fl">1</span>; <span class="fl">1</span> <span class="fl">4</span>], n_std<span class="op">=</span><span class="fl">2</span>, </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>           aspect_ratio<span class="op">=</span><span class="fl">1</span>, label<span class="op">=</span><span class="st">"cov1"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">covellipse!</span>([<span class="fl">1</span>,<span class="fl">0</span>], [<span class="fl">1</span> <span class="op">-</span><span class="fl">0.5</span>; <span class="op">-</span><span class="fl">0.5</span> <span class="fl">3</span>], </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>            showaxes<span class="op">=</span><span class="cn">true</span>, label<span class="op">=</span><span class="st">"cov2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div id="fig-covariance2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="quarto-actions_files/figure-html/fig-covariance2-output-1.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.3: Covariance ellipses</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="chapter-4" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="chapter-4"><span class="header-section-number">2.1.4</span> Chapter 4</h3>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">StatsPlots</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">covellipse</span>([<span class="fl">0</span>,<span class="fl">2</span>], [<span class="fl">2</span> <span class="fl">1</span>; <span class="fl">1</span> <span class="fl">4</span>], n_std<span class="op">=</span><span class="fl">2</span>, </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>           aspect_ratio<span class="op">=</span><span class="fl">1</span>, label<span class="op">=</span><span class="st">"cov1"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">covellipse!</span>([<span class="fl">1</span>,<span class="fl">0</span>], [<span class="fl">1</span> <span class="op">-</span><span class="fl">0.5</span>; <span class="op">-</span><span class="fl">0.5</span> <span class="fl">3</span>], </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            showaxes<span class="op">=</span><span class="cn">true</span>, label<span class="op">=</span><span class="st">"cov2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div id="fig-covariance3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="quarto-actions_files/figure-html/fig-covariance3-output-1.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.4: Covariance ellipses</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="chapter-5" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="chapter-5"><span class="header-section-number">2.1.5</span> Chapter 5</h3>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">StatsPlots</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">covellipse</span>([<span class="fl">0</span>,<span class="fl">2</span>], [<span class="fl">2</span> <span class="fl">1</span>; <span class="fl">1</span> <span class="fl">4</span>], n_std<span class="op">=</span><span class="fl">2</span>, </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           aspect_ratio<span class="op">=</span><span class="fl">1</span>, label<span class="op">=</span><span class="st">"cov1"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">covellipse!</span>([<span class="fl">1</span>,<span class="fl">0</span>], [<span class="fl">1</span> <span class="op">-</span><span class="fl">0.5</span>; <span class="op">-</span><span class="fl">0.5</span> <span class="fl">3</span>], </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>            showaxes<span class="op">=</span><span class="cn">true</span>, label<span class="op">=</span><span class="st">"cov2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<div id="fig-covariance4" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="quarto-actions_files/figure-html/fig-covariance4-output-1.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.5: Covariance ellipses</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 
+</section>
 </section>
 </main> <!-- /main -->
 <script type="application/javascript">
@@ -196,7 +365,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Julia and Python Side-by-Side</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Multi-Language Stats Book Demo</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
