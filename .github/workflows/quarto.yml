@@ -33,7 +33,10 @@ jobs:
 
       - name: Install Basic Requirements
         run: |
+          pyenv local 3.10.0
+          pyenv global 3.10.0
           python3 --version
+          python --version
           python3 -m pip install jupyter
           python3 -m pip install numpy
           python3 -m pip install matplotlib
