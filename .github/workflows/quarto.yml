@@ -21,12 +21,24 @@ jobs:
       - uses: julia-actions/setup-julia@v1
         with:
           version: '1.7'
+
+    - name: Install python version
+      uses: gabrielfalcao/pyenv-action@v9
+      with:
+        default: 3.7.5
+        command: |
+          PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.10.4
+          pyenv global 3.10.4
+        
+
       - name: Install Basic Requirements
         run: |
+          python3 --version
           python3 -m pip install jupyter
           python3 -m pip install numpy
           python3 -m pip install matplotlib
           python3 -m pip install julia
+
           python3 -c "import julia; julia.install()" # For ipython Julia 'magic'
 
           # TODO: Switch to using Julia Project.toml and Manifest.toml
