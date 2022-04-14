@@ -70,7 +70,7 @@ import matplotlib.pyplot as plt
 r = np.arange(0, 2, 0.01)
 theta = 2 * np.pi * r
 fig, ax = plt.subplots(
-  subplot_kw = {'projection': 'polar'} 
+  subplot_kw = {'projection': 'polar'} Joo
 )
 ax.plot(theta, r)
 ax.set_rticks([0.5, 1, 1.5, 2])
@@ -83,8 +83,8 @@ plt.show()
 ```{python}
 #| label: fig-polar-julia
 #| fig-cap: "A line plot on a polar axis"
-%%julia
 %matplotlib inline
+%%julia
 
 using StatsPlots
 
