@@ -28,7 +28,7 @@ jobs:
           default: 3.7.5
           command: |
             PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.10.0
-            pyenv global 3.10.0
+            pyenv local 3.10.0
         
 
       - name: Install Basic Requirements
