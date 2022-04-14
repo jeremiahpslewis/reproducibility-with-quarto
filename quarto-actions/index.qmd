@@ -7,6 +7,10 @@ format:
 engine: jupyter
 ---
 
+```{python}
+%load_ext julia.magic
+```
+
 ## Trial of How One Might Support Multiple Stats Languages in One Book
 
 For a textbook example of phenomenon X, we can use Julia and Python code to enable students to refer to the language they are most comfortable with / compare ease of solving a problem using different tools.
@@ -14,6 +18,9 @@ For a textbook example of phenomenon X, we can use Julia and Python code to enab
 ### Python
 
 Snippet from: https://quarto.org/docs/computations/python.html#code-blocks
+
+## Python with Julia Cross Reference
+
 
 ```{python}
 #| label: fig-polar
@@ -36,3 +43,43 @@ plt.show()
 See @sec-ch-1-jl for Julia code.
 
 
+# Python and Julia in Separate Tabs, using Python Kernel and Julia 'Magic'
+
+::: {.panel-tabset}
+
+## Python
+
+```{python}
+#| label: fig-polar1
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+## Julia
+
+```{python}
+#| label: fig-polar-julia
+#| fig-cap: "A line plot on a polar axis"
+%%julia
+
+using StatsPlots
+
+covellipse([0,2], [2 1; 1 4], n_std=2, 
+           aspect_ratio=1, label="cov1")
+covellipse!([1,0], [1 -0.5; -0.5 3], 
+            showaxes=true, label="cov2")
+```
+
+:::
