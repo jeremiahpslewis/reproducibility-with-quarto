@@ -50,7 +50,7 @@ See @sec-ch-1-jl for Julia code and @sec-ch-1-jl for Python code.
 
 ## Python and Julia in Separate Tabs, using Python Kernel and Julia 'Magic'
 
-In this example, the book is written in multiple languages in parallel, with all languages rendered in a single Jupyter notebook, using the Python Kernel and pyjulia extension (or other extensions like rpy2 as necessary).
+In this example, the book is written in multiple languages in parallel, with all languages rendered in a single Jupyter notebook, using the Python Kernel and pyjulia extension (or other extensions like rpy2 as necessary). The clear downsides here are that non-Python code is called through Python, debugging is more difficult, and reproducibility is diminished. The number of dependencies required is also unfortunately maximized. 
 
 ::: {.panel-tabset}
 
@@ -83,13 +83,12 @@ plt.show()
 
 using StatsPlots
 
-default(show = true)
-
-covellipse([0,2], [2 1; 1 4], n_std=2, 
+p = covellipse([0,2], [2 1; 1 4], n_std=2, 
            aspect_ratio=1, label="cov1");
-covellipse!([1,0], [1 -0.5; -0.5 3], 
+covellipse!(p[1,0], [1 -0.5; -0.5 3], 
             showaxes=true, label="cov2")
 
+display(p)
 ```
 
 
