@@ -27,3 +27,4 @@ _book/
 
 *.ipynb
 *.svg
+.ipynb_checkpoints/
