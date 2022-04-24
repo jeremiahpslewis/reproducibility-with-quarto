@@ -8,7 +8,8 @@ book:
   date: "2022-04-13"
   chapters:
     - index.qmd
-    - quarto-actions.qmd
+    - julia-supporting-material.qmd
+    - r-supporting-material.qmd
 
 # bibliography: references.bib
 

@@ -41,7 +41,7 @@ ax.grid(True)
 plt.show()
 ```
 
-See @sec-ch-1-jl for Julia code and @sec-ch-1-jl for Python code.
+See @sec-ch-1-jl for Julia code and @sec-ch-1-jl for R code.
 
 
 ## Python and Julia in Separate Tabs, using Python Kernel and Julia 'Magic'
@@ -72,10 +72,10 @@ plt.show()
 
 ## Julia
 
-Add Julia example here
+See @sec-ch-1-jl.
 
 ## R
 
-Add R example here.
+See @sec-ch-1-jl.
 
 :::

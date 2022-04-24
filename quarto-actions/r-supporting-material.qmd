@@ -1,0 +1,40 @@
+---
+title: "R Code"
+author: "Jeremiah Lewis"
+format:
+  html:
+    code-fold: false
+engine: jupyter
+---
+
+## R Supporting Code
+
+### Chapter 1 {#sec-ch-1-jl}
+
+Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks
+
+```{r}
+#| label: fig-covariance11
+#| fig-cap: "Covariance ellipses"
+
+plot(1:5, 6:10)
+```
+
+### Chapter 2
+
+```{r}
+#| label: fig-covariance12
+#| fig-cap: "Covariance ellipses"
+
+plot(1:5, 6:10)
+```
+
+### Chapter 3
+
+```{r}
+#| label: fig-covariance13
+#| fig-cap: "Covariance ellipses"
+
+plot(1:5, 6:10)
+```
+
