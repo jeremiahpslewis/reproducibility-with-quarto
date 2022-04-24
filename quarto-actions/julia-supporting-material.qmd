@@ -11,13 +11,14 @@ engine: jupyter
 
 ```{julia}
 #| tags: [parameters]
-
+#| include: false
 img_format = "svg"
 ```
 
 Setup Figure Output
 
 ```{julia}
+#| include: false
 using StatsPlots
 
 if img_format != "svg"
