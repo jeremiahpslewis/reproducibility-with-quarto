@@ -7,14 +7,6 @@ format:
 engine: jupyter
 ---
 
-```{python}
-#| echo: false
-#| output: false
-#| warning: false
-
-%load_ext julia.magic
-```
-
 ## Motivation
 
 Quarto is a promising successor to RMarkdown, in part because it isn't tied to a specific programming language. For publishing introductory (statistics) textbooks, one often wants to show code examples in multiple programming languages (usually Python, R, and Julia) as the field (and applications) are currently split amongst them. This site demonstrates different strategies for incorporating multiple programming languages into a single book.
@@ -80,17 +72,7 @@ plt.show()
 
 ## Julia
 
-```{python}
-#| label: fig-polar-julia
-#| fig-cap: "A line plot on a polar axis"
-%%julia
-
-using StatsPlots
-
-display(covellipse([0,2], [2 1; 1 4], n_std=2, 
-           aspect_ratio=1, label="cov1"))
-```
-
+Add Julia example here
 
 ## R
 
