@@ -16,3 +16,7 @@ book:
 format:
   html:
     theme: cosmo
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
