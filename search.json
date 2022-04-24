@@ -2,29 +2,57 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Quarto & Github Actions",
+    "title": "Multi-Language Stats Book Demo",
     "section": "",
-    "text": "Quarto is a promising successor to RMarkdown, in part because it isn’t tied to a specific programming language. For publishing introductory (statistics) textbooks, one often wants to show code examples in multiple programming languages (usually Python, R, and Julia) as the field (and applications) are currently split amongst them. This site demonstrates different strategies for incorporating multiple programming languages into a single book."
+    "text": "# Injected Parameters\nimg_format = \"svg\""
+  },
+  {
+    "objectID": "index.html#note-link-to-pdf-is-here",
+    "href": "index.html#note-link-to-pdf-is-here",
+    "title": "Multi-Language Stats Book Demo",
+    "section": "0.1 NOTE: Link to PDF is here",
+    "text": "0.1 NOTE: Link to PDF is here"
+  },
+  {
+    "objectID": "index.html#motivation",
+    "href": "index.html#motivation",
+    "title": "Multi-Language Stats Book Demo",
+    "section": "0.2 Motivation",
+    "text": "0.2 Motivation\nQuarto is a promising successor to RMarkdown, in part because it isn’t tied to a specific programming language. For publishing introductory (statistics) textbooks, one often wants to show code examples in multiple programming languages (usually Python, R, and Julia) as the field (and applications) are currently split amongst them. This site demonstrates different strategies for incorporating multiple programming languages into a single book."
   },
   {
     "objectID": "index.html#example-1-crossreferencing-examples-in-other-languages",
     "href": "index.html#example-1-crossreferencing-examples-in-other-languages",
-    "title": "Quarto & Github Actions",
-    "section": "0.2 Example 1: Crossreferencing examples in other languages",
-    "text": "0.2 Example 1: Crossreferencing examples in other languages\nWith this approach, the book is written in a main language, shown here as Python, and links to snippets in other languages are provided below each code block.\nOne advantage here is that each notebook file is dedicated to a separate programming language and can be executed in a dedicated environment. In terms of open source contributorship, it also makes ownership and maintenance responsibilities clearly separated on a per-file basis. The clear downside is that it means the book is not able to put all programming languages on equal footing and on mobile / tablet, the book will be harder to read as you will have to toggle between tabs or go forward / back between pages.\n\n0.2.1 Example: How to Plot a Figure\nSnippet from: https://quarto.org/docs/computations/python.html#code-blocks\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\nSee Section 2.1.1 for Julia code and Section 2.1.1 for Python code."
+    "title": "Multi-Language Stats Book Demo",
+    "section": "0.3 Example 1: Crossreferencing examples in other languages",
+    "text": "0.3 Example 1: Crossreferencing examples in other languages\nWith this approach, the book is written in a main language, shown here as Python, and links to snippets in other languages are provided below each code block.\nOne advantage here is that each notebook file is dedicated to a separate programming language and can be executed in a dedicated environment. In terms of open source contributorship, it also makes ownership and maintenance responsibilities clearly separated on a per-file basis. The clear downside is that it means the book is not able to put all programming languages on equal footing and on mobile / tablet, the book will be harder to read as you will have to toggle between tabs or go forward / back between pages.\n\n0.3.1 Example: How to Plot a Figure\nSnippet from: https://quarto.org/docs/computations/python.html#code-blocks\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\nSee Section 2.1.1 for Julia code and Section 2.1.1 for R code."
   },
   {
     "objectID": "index.html#python-and-julia-in-separate-tabs-using-python-kernel-and-julia-magic",
     "href": "index.html#python-and-julia-in-separate-tabs-using-python-kernel-and-julia-magic",
-    "title": "Quarto & Github Actions",
-    "section": "0.3 Python and Julia in Separate Tabs, using Python Kernel and Julia ‘Magic’",
-    "text": "0.3 Python and Julia in Separate Tabs, using Python Kernel and Julia ‘Magic’\nIn this example, the book is written in multiple languages in parallel, with all languages rendered in a single Jupyter notebook, using the Python Kernel and pyjulia extension (or other extensions like rpy2 as necessary). The clear downsides here are that non-Python code is called through Python, debugging is more difficult, and reproducibility is diminished. The number of dependencies required is also unfortunately maximized.\n\nPythonJuliaR\n\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 2: A line plot on a polar axis\n\n\n\n\n\n\nAdd Julia example here\n\n\nAdd R example here."
+    "title": "Multi-Language Stats Book Demo",
+    "section": "0.4 Python and Julia in Separate Tabs, using Python Kernel and Julia ‘Magic’",
+    "text": "0.4 Python and Julia in Separate Tabs, using Python Kernel and Julia ‘Magic’\nIn this example, the book is written in multiple languages in parallel, with all languages rendered in a single Jupyter notebook, using the Python Kernel and pyjulia extension (or other extensions like rpy2 as necessary). The clear downsides here are that non-Python code is called through Python, debugging is more difficult, and reproducibility is diminished. The number of dependencies required is also unfortunately maximized.\n\nPythonJuliaR\n\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 2: A line plot on a polar axis\n\n\n\n\n\n\nSee Section 2.1.1.\n\n\nSee Section 3.1.1."
   },
   {
-    "objectID": "quarto-actions.html",
-    "href": "quarto-actions.html",
+    "objectID": "julia-supporting-material.html",
+    "href": "julia-supporting-material.html",
     "title": "2  Julia Code",
     "section": "",
-    "text": "Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.1: Covariance ellipses\n\n\n\n\n\n\n\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.2: Covariance ellipses\n\n\n\n\n\n\n\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.3: Covariance ellipses\n\n\n\n\n\n\n\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.4: Covariance ellipses\n\n\n\n\n\n\n\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.5: Covariance ellipses"
+    "text": "img_format = \"svg\"\n\n\"svg\"\n\n\n\n# Injected Parameters\nimg_format = \"svg\"\n\n\"svg\"\n\n\nSetup Figure Output\n\nusing StatsPlots\n\nif img_format != \"svg\"\n  gr(size=(600,400))\n  default(fmt = :png)\nend\n\n\n\nSnippet from: https://quarto.org/docs/computations/julia.html#code-blocks\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.1: Covariance ellipses\n\n\n\n\n\n\n\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.2: Covariance ellipses\n\n\n\n\n\n\n\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.3: Covariance ellipses\n\n\n\n\n\n\n\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.4: Covariance ellipses\n\n\n\n\n\n\n\n\nusing StatsPlots\n\ncovellipse([0,2], [2 1; 1 4], n_std=2, \n           aspect_ratio=1, label=\"cov1\")\ncovellipse!([1,0], [1 -0.5; -0.5 3], \n            showaxes=true, label=\"cov2\")\n\n\n\n\nFigure 2.5: Covariance ellipses"
+  },
+  {
+    "objectID": "r-supporting-material.html",
+    "href": "r-supporting-material.html",
+    "title": "R Code",
+    "section": "",
+    "text": "img_format = \"svg\""
+  },
+  {
+    "objectID": "r-supporting-material.html#r-supporting-code",
+    "href": "r-supporting-material.html#r-supporting-code",
+    "title": "R Code",
+    "section": "3.1 R Supporting Code",
+    "text": "3.1 R Supporting Code\n\n3.1.1 Chapter 1\nSnippet from: https://quarto.org/docs/computations/julia.html#code-blocks\n\nplot(1:5, 6:10)\n\n\n\n\nFigure 3.1: Covariance ellipses\n\n\n\n\n\n\n3.1.2 Chapter 2\n\nplot(1:5, 6:10)\n\n\n\n\nFigure 3.2: Covariance ellipses\n\n\n\n\n\n\n3.1.3 Chapter 3\n\nplot(1:5, 6:10)\n\n\n\n\nFigure 3.3: Covariance ellipses"
   }
 ]

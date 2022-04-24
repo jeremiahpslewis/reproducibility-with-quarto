@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.303">
+<meta name="generator" content="quarto-0.9.301">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -89,7 +89,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
-<link href="./quarto-actions.html" rel="next">
+<link href="./julia-supporting-material.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -128,7 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Quarto &amp; Github Actions</h1>
+      <h1 class="quarto-secondary-nav-title">Multi-Language Stats Book Demo</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -158,7 +158,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quarto-actions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Julia Code</span></a>
+  <a href="./julia-supporting-material.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Julia Code</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r-supporting-material.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R Code</span></a>
   </div>
 </li>
     </ul>
@@ -170,12 +175,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation"> <span class="header-section-number">0.1</span> Motivation</a></li>
-  <li><a href="#example-1-crossreferencing-examples-in-other-languages" id="toc-example-1-crossreferencing-examples-in-other-languages" class="nav-link" data-scroll-target="#example-1-crossreferencing-examples-in-other-languages"> <span class="header-section-number">0.2</span> Example 1: Crossreferencing examples in other languages</a>
+  <li><a href="#note-link-to-pdf-is-here" id="toc-note-link-to-pdf-is-here" class="nav-link active" data-scroll-target="#note-link-to-pdf-is-here"> <span class="header-section-number">0.1</span> NOTE: Link to PDF is <span>here</span></a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation"> <span class="header-section-number">0.2</span> Motivation</a></li>
+  <li><a href="#example-1-crossreferencing-examples-in-other-languages" id="toc-example-1-crossreferencing-examples-in-other-languages" class="nav-link" data-scroll-target="#example-1-crossreferencing-examples-in-other-languages"> <span class="header-section-number">0.3</span> Example 1: Crossreferencing examples in other languages</a>
   <ul class="collapse">
-  <li><a href="#example-how-to-plot-a-figure" id="toc-example-how-to-plot-a-figure" class="nav-link" data-scroll-target="#example-how-to-plot-a-figure"> <span class="header-section-number">0.2.1</span> Example: How to Plot a Figure</a></li>
+  <li><a href="#example-how-to-plot-a-figure" id="toc-example-how-to-plot-a-figure" class="nav-link" data-scroll-target="#example-how-to-plot-a-figure"> <span class="header-section-number">0.3.1</span> Example: How to Plot a Figure</a></li>
   </ul></li>
-  <li><a href="#python-and-julia-in-separate-tabs-using-python-kernel-and-julia-magic" id="toc-python-and-julia-in-separate-tabs-using-python-kernel-and-julia-magic" class="nav-link" data-scroll-target="#python-and-julia-in-separate-tabs-using-python-kernel-and-julia-magic"> <span class="header-section-number">0.3</span> Python and Julia in Separate Tabs, using Python Kernel and Julia ‘Magic’</a></li>
+  <li><a href="#python-and-julia-in-separate-tabs-using-python-kernel-and-julia-magic" id="toc-python-and-julia-in-separate-tabs-using-python-kernel-and-julia-magic" class="nav-link" data-scroll-target="#python-and-julia-in-separate-tabs-using-python-kernel-and-julia-magic"> <span class="header-section-number">0.4</span> Python and Julia in Separate Tabs, using Python Kernel and Julia ‘Magic’</a></li>
   </ul>
 </nav>
     </div>
@@ -184,7 +190,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Quarto &amp; Github Actions</h1>
+<h1 class="title d-none d-lg-block">Multi-Language Stats Book Demo</h1>
 </div>
 
 
@@ -212,49 +218,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="motivation" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="motivation"><span class="header-section-number">0.1</span> Motivation</h2>
+<div class="cell" data-tags="[&quot;injected-parameters&quot;]" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Injected Parameters</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>img_format <span class="op">=</span> <span class="st">"svg"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="note-link-to-pdf-is-here" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="note-link-to-pdf-is-here"><span class="header-section-number">0.1</span> NOTE: Link to PDF is <a href="quarto-and-github-actions.pdf">here</a></h2>
+</section>
+<section id="motivation" class="level2" data-number="0.2">
+<h2 data-number="0.2" class="anchored" data-anchor-id="motivation"><span class="header-section-number">0.2</span> Motivation</h2>
 <p>Quarto is a promising successor to RMarkdown, in part because it isn’t tied to a specific programming language. For publishing introductory (statistics) textbooks, one often wants to show code examples in multiple programming languages (usually Python, R, and Julia) as the field (and applications) are currently split amongst them. This site demonstrates different strategies for incorporating multiple programming languages into a single book.</p>
 </section>
-<section id="example-1-crossreferencing-examples-in-other-languages" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="example-1-crossreferencing-examples-in-other-languages"><span class="header-section-number">0.2</span> Example 1: Crossreferencing examples in other languages</h2>
+<section id="example-1-crossreferencing-examples-in-other-languages" class="level2" data-number="0.3">
+<h2 data-number="0.3" class="anchored" data-anchor-id="example-1-crossreferencing-examples-in-other-languages"><span class="header-section-number">0.3</span> Example 1: Crossreferencing examples in other languages</h2>
 <p>With this approach, the book is written in a main language, shown here as Python, and links to snippets in other languages are provided below each code block.</p>
 <p>One advantage here is that each notebook file is dedicated to a separate programming language and can be executed in a dedicated environment. In terms of open source contributorship, it also makes ownership and maintenance responsibilities clearly separated on a per-file basis. The clear downside is that it means the book is not able to put all programming languages on equal footing and on mobile / tablet, the book will be harder to read as you will have to toggle between tabs or go forward / back between pages.</p>
-<section id="example-how-to-plot-a-figure" class="level3" data-number="0.2.1">
-<h3 data-number="0.2.1" class="anchored" data-anchor-id="example-how-to-plot-a-figure"><span class="header-section-number">0.2.1</span> Example: How to Plot a Figure</h3>
+<section id="example-how-to-plot-a-figure" class="level3" data-number="0.3.1">
+<h3 data-number="0.3.1" class="anchored" data-anchor-id="example-how-to-plot-a-figure"><span class="header-section-number">0.3.1</span> Example: How to Plot a Figure</h3>
 <p>Snippet from: https://quarto.org/docs/computations/python.html#code-blocks</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ax.plot(theta, r)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div id="fig-polar" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-polar-output-1.png" width="442" height="432" class="figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1: A line plot on a polar axis</figcaption><p></p>
-</figure>
-</div>
-</div>
-</div>
-<p>See <a href="quarto-actions.html#sec-ch-1-jl">Section&nbsp;<span>2.1.1</span></a> for Julia code and <a href="quarto-actions.html#sec-ch-1-jl">Section&nbsp;<span>2.1.1</span></a> for Python code.</p>
-</section>
-</section>
-<section id="python-and-julia-in-separate-tabs-using-python-kernel-and-julia-magic" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="python-and-julia-in-separate-tabs-using-python-kernel-and-julia-magic"><span class="header-section-number">0.3</span> Python and Julia in Separate Tabs, using Python Kernel and Julia ‘Magic’</h2>
-<p>In this example, the book is written in multiple languages in parallel, with all languages rendered in a single Jupyter notebook, using the Python Kernel and pyjulia extension (or other extensions like rpy2 as necessary). The clear downsides here are that non-Python code is called through Python, debugging is more difficult, and reproducibility is diminished. The number of dependencies required is also unfortunately maximized.</p>
-<div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Julia</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">R</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -262,16 +243,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>}</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>ax.plot(theta, r)</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
+<div id="fig-polar" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="index_files/figure-html/fig-polar-output-1.png" width="443" height="432" class="figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1: A line plot on a polar axis</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>See <a href="julia-supporting-material.html#sec-ch-1-jl">Section&nbsp;<span>2.1.1</span></a> for Julia code and <a href="julia-supporting-material.html#sec-ch-1-jl">Section&nbsp;<span>2.1.1</span></a> for R code.</p>
+</section>
+</section>
+<section id="python-and-julia-in-separate-tabs-using-python-kernel-and-julia-magic" class="level2" data-number="0.4">
+<h2 data-number="0.4" class="anchored" data-anchor-id="python-and-julia-in-separate-tabs-using-python-kernel-and-julia-magic"><span class="header-section-number">0.4</span> Python and Julia in Separate Tabs, using Python Kernel and Julia ‘Magic’</h2>
+<p>In this example, the book is written in multiple languages in parallel, with all languages rendered in a single Jupyter notebook, using the Python Kernel and pyjulia extension (or other extensions like rpy2 as necessary). The clear downsides here are that non-Python code is called through Python, debugging is more difficult, and reproducibility is diminished. The number of dependencies required is also unfortunately maximized.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Julia</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">R</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>}</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>ax.plot(theta, r)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
 <div id="fig-polar1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="index_files/figure-html/fig-polar1-output-1.png" width="442" height="432" class="figure-img"></p>
+<p><img src="index_files/figure-html/fig-polar1-output-1.png" width="443" height="432" class="figure-img"></p>
 <p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2: A line plot on a polar axis</figcaption><p></p>
 </figure>
 </div>
@@ -279,10 +292,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Add Julia example here</p>
+<p>See <a href="julia-supporting-material.html#sec-ch-1-jl">Section&nbsp;<span>2.1.1</span></a>.</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>Add R example here.</p>
+<p>See <a href="r-supporting-material.html#sec-ch-1-r">Section&nbsp;<span>3.1.1</span></a>.</p>
 </div>
 </div>
 </div>
@@ -374,7 +387,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./quarto-actions.html" class="pagination-link">
+      <a href="./julia-supporting-material.html" class="pagination-link">
         <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Julia Code</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
