@@ -7,7 +7,8 @@ USER root
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && wget https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.301/quarto-0.9.301-linux-amd64.deb \
     && dpkg -i quarto-0.9.301-linux-amd64.deb \
-    && rm quarto-0.9.301-linux-amd64.deb
+    && rm quarto-0.9.301-linux-amd64.deb \
+    && quarto tools install tinytex
 
 COPY Project.toml Manifest.toml requirements.txt ./ 
 
