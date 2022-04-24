@@ -1,9 +1,12 @@
 on:
   push:
     branches: main
+    paths:
+      - quarto-actions/
   pull_request:
     branches: main
-  # to be able to trigger a manual build
+    paths:
+      - quarto-actions/
   workflow_dispatch:
 
 name: Render and deploy Book
