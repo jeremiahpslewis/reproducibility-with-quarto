@@ -9,7 +9,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && dpkg -i quarto-0.9.301-linux-amd64.deb \
     && rm quarto-0.9.301-linux-amd64.deb
 
-COPY Project.toml Manifest.toml .
+COPY Project.toml Manifest.toml ./ 
 
 RUN julia -e 'using Pkg; Pkg.activate("."); Pkg.instantiate();'
 
