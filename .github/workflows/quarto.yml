@@ -9,6 +9,8 @@ on:
     paths:
       - quarto-actions/
       - .github/workflows/quarto.yml
+  registry_package:
+    types: [published, updated]
   workflow_dispatch:
 
 name: Render and deploy Book
