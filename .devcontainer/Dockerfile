@@ -11,9 +11,9 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 
 COPY Project.toml Manifest.toml requirements.txt ./ 
 
-# RUN pip install --quiet --no-cache-dir -r requirements.txt && \
-#     fix-permissions "${CONDA_DIR}" && \
-#     fix-permissions "/home/${NB_USER}"
+RUN pip install --quiet --no-cache-dir -r requirements.txt && \
+    fix-permissions "${CONDA_DIR}" && \
+    fix-permissions "/home/${NB_USER}"
 
 RUN julia -e 'using Pkg; Pkg.activate("."); Pkg.instantiate();'
 
