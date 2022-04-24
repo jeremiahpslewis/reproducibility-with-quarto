@@ -3,10 +3,12 @@ on:
     branches: main
     paths:
       - quarto-actions/
+      - .github/workflows/quarto.yml
   pull_request:
     branches: main
     paths:
       - quarto-actions/
+      - .github/workflows/quarto.yml
   workflow_dispatch:
 
 name: Render and deploy Book

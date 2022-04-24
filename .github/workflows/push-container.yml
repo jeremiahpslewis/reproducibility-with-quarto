@@ -13,7 +13,7 @@ on:
       - Manifest.toml
       - Project.toml
       - requirements.txt
-      - .github/push-container.yml
+      - .github/workflows/push-container.yml
   # to be able to trigger a manual build
   workflow_dispatch:
 
