@@ -7,6 +7,8 @@ format:
 engine: jupyter
 ---
 
+## NOTE: Link to PDF is [here](quarto-and-github-actions.pdf)
+
 ## Motivation
 
 Quarto is a promising successor to RMarkdown, in part because it isn't tied to a specific programming language. For publishing introductory (statistics) textbooks, one often wants to show code examples in multiple programming languages (usually Python, R, and Julia) as the field (and applications) are currently split amongst them. This site demonstrates different strategies for incorporating multiple programming languages into a single book.

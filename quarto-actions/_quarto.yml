@@ -4,6 +4,7 @@ project:
 
 book:
   title: "Quarto & Github Actions"
+  output-file: "quarto-and-github-actions"
   author: "Jeremiah Lewis"
   date: "2022-04-13"
   chapters:
@@ -20,5 +21,3 @@ format:
     toc: true
     number-sections: true
     colorlinks: true
-    fig-width: 7
-    fig-height: 5

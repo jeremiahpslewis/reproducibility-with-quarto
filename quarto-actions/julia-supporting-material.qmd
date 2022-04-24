@@ -9,6 +9,22 @@ engine: jupyter
 
 ## Julia Supporting Code
 
+```{julia}
+#| tags: [parameters]
+
+img_format = "svg"
+```
+
+Setup Figure Output
+
+```{julia}
+using StatsPlots
+
+if img_format != "svg"
+  gr(size=(600,400))
+  default(fmt = :png)
+end
+```
 ### Chapter 1 {#sec-ch-1-jl}
 
 Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks
