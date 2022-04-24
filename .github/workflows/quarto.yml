@@ -18,19 +18,6 @@ jobs:
         uses: quarto-dev/quarto-actions/install-quarto@v1
         with:
           tinytex: true 
-      - uses: julia-actions/setup-julia@v1
-        with:
-          version: '1.7'
-
-      - name: Install python version
-        uses: gabrielfalcao/pyenv-action@v9
-        with:
-          default: 3.7.5
-          command: |
-            PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.10.0
-
-      - name: Install Basic Requirements
-        run: |
 
       - name: Render book to all formats
         run: |
