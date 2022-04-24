@@ -21,6 +21,10 @@ jobs:
     container: ghcr.io/jeremiahpslewis/quarto-reproducible-gh-actions:main
     steps:
       - 
+        name: Checkout repository
+        uses: actions/checkout@v3
+
+      - 
         name: Render book to all formats
         run: |
           quarto render quarto-actions
