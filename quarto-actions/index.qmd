@@ -76,6 +76,6 @@ See @sec-ch-1-jl.
 
 ## R
 
-See @sec-ch-1-jl.
+See @sec-ch-1-r.
 
 :::

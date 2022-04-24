@@ -20,3 +20,5 @@ format:
     toc: true
     number-sections: true
     colorlinks: true
+    fig-width: 7
+    fig-height: 5
