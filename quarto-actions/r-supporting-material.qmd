@@ -9,7 +9,7 @@ engine: jupyter
 
 ## R Supporting Code
 
-### Chapter 1 {#sec-ch-1-jl}
+### Chapter 1 {#sec-ch-1-r}
 
 Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks
 
