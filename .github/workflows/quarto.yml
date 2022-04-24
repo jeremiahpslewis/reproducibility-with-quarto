@@ -11,14 +11,10 @@ on:
 
 name: Render and deploy Book
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-
 jobs:
   docker:
     runs-on: ubuntu-latest
-    container: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
+    container: ghcr.io/quarto-reproducible-gh-actions:main
     steps:
       - 
         name: Render book to all formats
