@@ -19,3 +19,5 @@ RUN pip install --quiet --no-cache-dir -r requirements.txt && \
 RUN julia -e 'using Pkg; Pkg.activate("."); Pkg.instantiate();'
 
 USER ${NB_UID}
+
+CMD quarto render quarto-actions

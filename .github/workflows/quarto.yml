@@ -8,21 +8,39 @@ on:
 
 name: Render and deploy Book
 
+env:
+  QUARTO_TAG: jeremiahpslewis/quarto:v1
+
 jobs:
-  build-deploy:
+  docker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Install Quarto
-        uses: quarto-dev/quarto-actions/install-quarto@v1
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      -
+        name: Build and export to Docker
+        uses: docker/build-push-action@v2
         with:
-          tinytex: true 
-
-      - name: Render book to all formats
+          context: .
+          load: true
+          tags: ${{ env.QUARTO_TAG }}
+      -
+        name: Test
+        run: |
+          docker run --rm ${{ env.QUARTO_TAG }}    
+      - 
+        name: Render book to all formats
         run: |
           quarto render quarto-actions
-      - name: Deploy 🚀
+      - 
+        name: Deploy 🚀
         # only deploy when push to main
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4

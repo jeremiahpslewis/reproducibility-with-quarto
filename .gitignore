@@ -29,3 +29,5 @@ _book/
 .ipynb_checkpoints/
 index_files/
 .DS_Store
+*.tex
+*.log
