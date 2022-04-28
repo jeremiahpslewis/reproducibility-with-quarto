@@ -26,9 +26,9 @@ jobs:
       - 
         name: Render book to all formats
         run: |
-          quarto render quarto-actions -P img_format:png --to pdf
+          quarto render quarto-actions --to pdf
           mv quarto-actions/_book/quarto-and-github-actions.pdf .
-          quarto render quarto-actions -P img_format:svg --to html
+          quarto render quarto-actions --to html
           mv quarto-and-github-actions.pdf quarto-actions/_book/
       - 
         name: Deploy 🚀
