@@ -19,8 +19,7 @@ Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks
 
 using Plots
 
-gr(size=(3, 5), fmt = :pdf)
-
+gr(fmt = :pdf)
 
 plot([0; 1.0], [ 0.12000000000; 0.12000000003])
 ```
