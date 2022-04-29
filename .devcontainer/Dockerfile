@@ -5,9 +5,9 @@ USER root
 
 # ** [Optional] Uncomment this section to install additional packages. **
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && wget https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.301/quarto-0.9.301-linux-amd64.deb \
-    && dpkg -i quarto-0.9.301-linux-amd64.deb \
-    && rm quarto-0.9.301-linux-amd64.deb \
+    && wget -O quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.326/quarto-0.9.326-linux-amd64.deb \
+    && dpkg -i quarto.deb \
+    && rm quarto.deb \
     && apt-get install -y lmodern \
     && apt-get install -y rsync
 
