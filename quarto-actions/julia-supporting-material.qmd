@@ -15,18 +15,20 @@ Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks
 
 ```{julia}
 #| tags: [parameters]
+#| include: false
 
 fig_format = "pdf"
 ```
 
 ```{julia}
-#| label: fig-covariance111
+#| label: fig-covariance1111
 #| fig-cap: "Covariance ellipses"
 #| fig-width: 5
 #| fig-height: 4
 import CairoMakie
 
 CairoMakie.activate!(type = fig_format)
+CairoMakie.update_theme!(resolution=(ENV["QUARTO_FIG_HEIGHT"]*100, ENV["QUARTO_FIG_WIDTH"]*100))
 
 x = range(0, 10, length=100)
 y = sin.(x)
@@ -49,6 +51,8 @@ CairoMakie.lines(x, y)
 ```{julia}
 #| label: fig-covariance
 #| fig-cap: "Covariance ellipses"
+#| fig-width: 5
+#| fig-height: 4
 
 using Plots
 
