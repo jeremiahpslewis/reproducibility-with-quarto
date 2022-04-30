@@ -47,8 +47,8 @@ CairoMakie.lines(x, y)
 using Plots
 
 fig_dpi = 300
-fig_height = parse(Float64, ENV["QUARTO_FIG_HEIGHT"])
-fig_width = parse(Float64, ENV["QUARTO_FIG_WIDTH"])
+fig_height = parse(Float64, ENV["QUARTO_FIG_HEIGHT"]) * fig_dpi
+fig_width = parse(Float64, ENV["QUARTO_FIG_WIDTH"]) * fig_dpi
 
 if fig_format == "pdf"
   gr(size=(fig_width, fig_height), fmt = :pdf, dpi = fig_dpi)
