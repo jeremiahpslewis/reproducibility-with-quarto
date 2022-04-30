@@ -14,6 +14,21 @@ engine: jupyter
 Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks
 
 ```{julia}
+#| label: fig-covariance111
+#| fig-cap: "Covariance ellipses"
+
+import CairoMakie
+
+CairoMakie.activate!(type = "pdf")
+
+x = range(0, 10, length=100)
+y = sin.(x)
+CairoMakie.lines(x, y)
+# display(figure)
+```
+
+
+```{julia}
 #| label: fig-covariance
 #| fig-cap: "Covariance ellipses"
 

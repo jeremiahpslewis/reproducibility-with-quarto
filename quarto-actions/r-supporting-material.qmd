@@ -14,6 +14,14 @@ engine: jupyter
 Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks
 
 ```{r}
+#| tags: [parameters]
+#| echo: false
+
+alpha = 0.1
+ratio = 0.1
+```
+
+```{r}
 #| label: fig-covariance11
 #| fig-cap: "Covariance ellipses"
 
