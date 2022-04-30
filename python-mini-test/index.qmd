@@ -7,18 +7,6 @@ format:
 engine: jupyter
 ---
 
-## NOTE: Link to PDF is [here](quarto-and-github-actions.pdf)
-
-## Motivation
-
-Quarto is a promising successor to RMarkdown, in part because it isn't tied to a specific programming language. For publishing introductory (statistics) textbooks, one often wants to show code examples in multiple programming languages (usually Python, R, and Julia) as the field (and applications) are currently split amongst them. This site demonstrates different strategies for incorporating multiple programming languages into a single book.
-
-## Example 1: Crossreferencing examples in other languages
-
-With this approach, the book is written in a main language, shown here as Python, and links to snippets in other languages are provided below each code block.
-
-One advantage here is that each notebook file is dedicated to a separate programming language and can be executed in a dedicated environment. In terms of open source contributorship, it also makes ownership and maintenance responsibilities clearly separated on a per-file basis. The clear downside is that it means the book is not able to put all programming languages on equal footing and on mobile / tablet, the book will be harder to read as you will have to toggle between tabs or go forward / back between pages.
-
 ```{python}
 #| tags: [parameters]
 #| echo: false

@@ -19,13 +19,6 @@ With this approach, the book is written in a main language, shown here as Python
 
 One advantage here is that each notebook file is dedicated to a separate programming language and can be executed in a dedicated environment. In terms of open source contributorship, it also makes ownership and maintenance responsibilities clearly separated on a per-file basis. The clear downside is that it means the book is not able to put all programming languages on equal footing and on mobile / tablet, the book will be harder to read as you will have to toggle between tabs or go forward / back between pages.
 
-```{python}
-#| tags: [parameters]
-#| echo: false
-alpha = 0.1
-ratio = 0.1
-```
-
 ### Example: How to Plot a Figure
 
 Snippet from: https://quarto.org/docs/computations/python.html#code-blocks
