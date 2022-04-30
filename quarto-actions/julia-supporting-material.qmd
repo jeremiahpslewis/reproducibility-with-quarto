@@ -28,7 +28,7 @@ fig_format = "pdf"
 import CairoMakie
 
 CairoMakie.activate!(type = fig_format)
-CairoMakie.update_theme!(resolution=(ENV["QUARTO_FIG_HEIGHT"]*100, ENV["QUARTO_FIG_WIDTH"]*100))
+CairoMakie.update_theme!(resolution=(parse(Int64, ENV["QUARTO_FIG_HEIGHT"])*100, parse(Int64, ENV["QUARTO_FIG_WIDTH"])*100))
 
 x = range(0, 10, length=100)
 y = sin.(x)
