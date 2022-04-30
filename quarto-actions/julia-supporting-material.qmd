@@ -14,19 +14,37 @@ engine: jupyter
 Snippet from: https://quarto.org/docs/computations/julia.html#code-blocks
 
 ```{julia}
+#| tags: [parameters]
+
+fig_format = "pdf"
+```
+
+```{julia}
 #| label: fig-covariance111
 #| fig-cap: "Covariance ellipses"
-
+#| fig-width: 5
+#| fig-height: 4
 import CairoMakie
 
-CairoMakie.activate!(type = "pdf")
+CairoMakie.activate!(type = fig_format)
 
 x = range(0, 10, length=100)
 y = sin.(x)
 CairoMakie.lines(x, y)
-# display(figure)
 ```
 
+
+```{julia}
+#| label: fig-covariance111
+#| fig-cap: "Covariance ellipses"
+import CairoMakie
+
+CairoMakie.activate!(type = fig_format)
+
+x = range(0, 10, length=100)
+y = sin.(x)
+CairoMakie.lines(x, y)
+```
 
 ```{julia}
 #| label: fig-covariance
@@ -34,7 +52,9 @@ CairoMakie.lines(x, y)
 
 using Plots
 
-gr(fmt = :pdf)
+if fig_format == "pdf"
+  gr(fmt = :pdf)
+end
 
 plot([0; 1.0], [ 0.12000000000; 0.12000000003])
 ```
