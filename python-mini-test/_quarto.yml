@@ -1,0 +1,21 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Python Mini Environment"
+  output-file: "python-mini-test"
+  author: "Jeremiah Lewis"
+  date: "2022-04-13"
+  chapters:
+    - index.qmd
+
+# bibliography: references.bib
+
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    fig-width: 1
+    fig-height: 1
