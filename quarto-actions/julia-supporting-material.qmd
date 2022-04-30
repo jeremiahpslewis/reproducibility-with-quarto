@@ -28,7 +28,9 @@ fig_format = "pdf"
 import CairoMakie
 
 CairoMakie.activate!(type = fig_format)
-CairoMakie.update_theme!(resolution=(parse(Int64, ENV["QUARTO_FIG_HEIGHT"])*100, parse(Int64, ENV["QUARTO_FIG_WIDTH"])*100))
+CairoMakie.update_theme!(resolution=(parse(Float64, ENV["QUARTO_FIG_HEIGHT"])*100,
+                                     parse(Float64, ENV["QUARTO_FIG_WIDTH"])*100
+                                     ))
 
 x = range(0, 10, length=100)
 y = sin.(x)
@@ -51,13 +53,16 @@ CairoMakie.lines(x, y)
 ```{julia}
 #| label: fig-covariance
 #| fig-cap: "Covariance ellipses"
-#| fig-width: 5
-#| fig-height: 4
+#| fig-width: 4
+#| fig-height: 3
 
 using Plots
 
+fig_height = parse(Float64, ENV["QUARTO_FIG_HEIGHT"])*100)
+fig_width = parse(Float64, ENV["QUARTO_FIG_WIDTH"]
+
 if fig_format == "pdf"
-  gr(fmt = :pdf)
+  gr(size=(fig_width, fig_height), fmt = :pdf, dpi = 300)
 end
 
 plot([0; 1.0], [ 0.12000000000; 0.12000000003])
