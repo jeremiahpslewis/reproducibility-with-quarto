@@ -27,7 +27,6 @@ Snippet from: https://quarto.org/docs/computations/python.html#code-blocks
 #| label: fig-polar
 #| fig-cap: "A line plot on a polar axis"
 
-print(alpha)
 import numpy as np
 import matplotlib.pyplot as plt
 
