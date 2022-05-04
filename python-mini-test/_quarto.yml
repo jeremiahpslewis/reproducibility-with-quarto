@@ -17,5 +17,3 @@ format:
     toc: true
     number-sections: true
     colorlinks: true
-    fig-width: 1
-    fig-height: 1
