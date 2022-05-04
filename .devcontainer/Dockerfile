@@ -11,6 +11,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y rsync
 
 COPY Project.toml Manifest.toml requirements.txt ./ 
+COPY startup_ijulia.jl .julia/config/
 
 RUN pip install --quiet --no-cache-dir -r requirements.txt && \
     fix-permissions "${CONDA_DIR}" && \
