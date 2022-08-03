@@ -1,0 +1,69 @@
+---
+title: "Notes on Scientific Computing: Reproducibility in Quarto"
+author: "Jeremiah Lewis"
+format:
+  html:
+    code-fold: false
+engine: jupyter
+---
+
+TLDR: Use the 'reproducible quarto' stack of Docker + Github Actions + Quarto + VSCode and reap the gains
+
+
+## Background
+
+Using the software package Quarto, you can weave together text and code into a computational document. Unlike other packages
+for generating computational documents, Quarto distinguishes itself by being programming language neutral, using Jupyter notebooks
+in the background to support any programing language which has a Jupyter Kernel.
+
+While Quarto is a promising successor to a previous generation of computational document tools which were closely tied
+to a specific programming language (notably Rmarkdown / knitr), it does not, itself, solve the problem of document
+reproducibility. In other words, Quarto can generate a new document from a quarto `.qmd` file, but there are no guarantees
+that this process will produce an identical result.
+
+## Ensuring Reproducibility with Quarto
+
+In order to achieve document reprodcibility, it is first necessary to have a working idea of the ways in which
+one should be able to recreate a given document or workflow.
+
+Some common aims of reproducibility are:
+
+### Good for the researcher
+
+- "helps researchers remember how and why they performed specific analyses during the course of a project" https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/bes2.1801
+- "enables researchers to quickly and simply modify analyses and figures" https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/bes2.1801
+- "enables quick reconfiguration of previously conducted research tasks so that new projects that require similar tasks become much simpler and easier" https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/bes2.1801
+- "conducting reproducible research is a strong indicator to fellow researchers of rigor, trustworthiness, and transparency in scientific research" https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/bes2.1801
+
+### Good for the commons
+
+- "allows others to learn from your work" https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/bes2.1801
+- "allows others to understand and reproduce a researcher's work" https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/bes2.1801
+- "allows others to protect themselves from your mistakes" https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/bes2.1801
+
+## Common Pitfalls
+
+### Principled Debugging instead of mind-reading
+
+Posting a bug report or asking for help is the lowest friction way of collaborating on a scientific project.
+But diverse environments mean that large amounts of energy can be spent on resolving low-value bugs.
+Standardized container environments can reduce the incidence of this type of 'needless' debugging.
+
+### Batteries not Included
+
+Many approaches to reproduciblity (checkpoint package (link), packrat), offer principled ways of documenting software dependencies
+used in a project and tools to recover or recreate these dependencies on a user's machine. While this approach is critical for a researcher's own benefit,
+without offering a neutral computational environment, this 'batteries not included' angle is poisonous for to commons.
+An ideal reproducibility setup does not require a user's own equipment to reproduce the analysis, as this always
+presents an additional barrier to contribution. Rather reaching a standard of 'if you can read it, you can run it' should be
+strived for. This can be achieved by using continuous integration services like GitHub actions where any user can modify a document
+and then see the effect of their changes entirely in the cloud and at no cost.
+
+
+### Works on my machine
+
+Given the large number of different computer models and even greater number of combinations of possible software packages and versions, it
+sometimes seems like a miracle that code written in one environment reliably produces the same result in another. One of the most
+frustrating conditions where this occurs is between a scientist's local machine and their (cloud-based) continuous integration server.
+This issue can be avoided by running quarto using Visual Studio Code's Dev Container environments and using the same container specification
+for continous integration. This reduces the degree (and frequency) of discrepancies greatly.

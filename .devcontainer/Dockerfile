@@ -1,10 +1,10 @@
-
 FROM jupyter/datascience-notebook:notebook-6.4.10
 
 USER root
 
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && wget -O quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.358/quarto-0.9.358-linux-amd64.deb \
+RUN QUARTO_VERSION=1.1.29 \
+    && apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && wget -O quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb \
     && dpkg -i quarto.deb \
     && rm quarto.deb \
     && apt-get install -y lmodern \
