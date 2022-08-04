@@ -18,7 +18,7 @@ name: Render and deploy Book
 jobs:
   docker:
     runs-on: ubuntu-latest
-    container: ghcr.io/jeremiahpslewis/quarto-reproducible:main
+    container: ghcr.io/jeremiahpslewis/reproducibility-with-quarto:main
     steps:
       - 
         name: Checkout repository
