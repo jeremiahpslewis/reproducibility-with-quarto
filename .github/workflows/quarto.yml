@@ -26,9 +26,9 @@ jobs:
       - 
         name: Render book to all formats
         run: |
-          quarto render quarto-actions --to pdf
+          quarto render reproducibility-with-quarto --to pdf
           mv quarto-actions/_book/quarto-and-github-actions.pdf .
-          quarto render quarto-actions --to html
+          quarto render reproducibility-with-quarto --to html
           mv quarto-and-github-actions.pdf quarto-actions/_book/          
       - 
         name: Deploy 🚀
@@ -39,4 +39,4 @@ jobs:
           # The branch the action should deploy to.
           branch: gh-pages
           # The folder the action should deploy. Adapt if you changed in Quarto config
-          folder: quarto-actions/_book
+          folder: reproducibility-with-quarto/_book
