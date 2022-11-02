@@ -1,1 +1,1 @@
-papermill==2.3.4
+papermill==2.4.0

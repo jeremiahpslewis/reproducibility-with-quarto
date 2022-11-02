@@ -17,6 +17,7 @@ book:
 format:
   html:
     theme: cosmo
+    fig-format: retina
   pdf:
     toc: true
     number-sections: true
